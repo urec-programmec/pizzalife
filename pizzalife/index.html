@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Фернандо Растрелли</title>
+    <header>
+        <div class="header-bg">
+        </div>
+    </header>
+    <style>
+        
+        body {
+            /* background: blue; url("images/header-title.jpg"); */
+            background:url("images/fon.jpg"); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        /* Меню */
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            list-style: none;
+            margin: 0; 
+            margin-bottom: 10px;
+            background: deepskyblue;            
+        }
+
+        .navigation a { 
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: black;
+            font-size: 130%;
+            font-family: Gill Sans, sans-serif;
+        }                
+           
+        .navigation li:last-child { 
+            color: red;
+        }  
+
+        .navigation a:hover {
+            background: #1565C0;
+        }
+
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .navigation {
+                flex-flow: column wrap;
+                padding: 0;
+            }
+
+            .navigation a { 
+                text-align: center; 
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255,0.3); 
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+            }
+
+            .navigation li:last-of-type a {
+                border-bottom: none;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .block {
+            display: flex;
+            background: white;
+            width: 520px;
+            height: 470px;     
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            
+        }
+
+        .title {
+            font-weight: bolder;
+            font-size: 120%;
+            font-family: Gill Sans, sans-serif;
+        }
+
+        .comment {
+            font-size: 100%;
+            font-family: Gill Sans, sans-serif;
+        }
+
+        /* .img {
+            
+            border: 3px solid red;
+            
+        } */
+        
+        img {
+            max-width: 95%;
+            max-height: 95%;
+            
+        }
+
+        #add {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+ </head>
+
+ <body>
+
+    <ul class="navigation">
+        <li><a href="index.html">Домашняя страница</a></li>
+        <li><a href="../">Гудбай, Америка</a></li>
+        <li><a href="#">Полный каталог</a></li>
+        <li><a href="grid.html">Найдите нас и наши пиццы</a></li>        
+        <li><a id="change-size" href="#">Aa</a></li>
+    </ul>
+    
+    <div id="add">
+    </div>
+
+    <div class="container">
+        <div class="block" id="1">
+            <img src="images/index/pizza1.jpg">
+            <div class="title">Пицца "Оливушка"</div>
+            <div class="comment">Хит сезона и молодых мам!</div>    
+        </div>
+        <div class="block" id="2">
+            <img src="images/index/pizza2.jpg">
+            <div class="title">Пицца "Аля-булка"</div>
+            <div class="comment">Самый нестандартный выбор на компанию</div>    
+        </div>
+        <div class="block" id="3">
+            <img src="images/index/pizza3.jpg">
+            <div class="title">Пицца "Какая-то мясная"</div>
+            <div class="comment">Заказывайте, когда ваша девушка голодна (и поскорее)</div>    
+        </div>
+        <div class="block" id="4">
+            <img src="images/index/pizza4.jpg">
+            <div class="title">Пицца "Овощи кто-то раскидал"</div>
+            <div class="comment">Неаккуратные повара, извините</div>    
+        </div>
+        <div class="block" id="5">
+            <img src="images/index/pizza5.jpg">
+            <div class="title">Пицца "Кусочки Тора"</div>
+            <div class="comment">Съешьте и почувствуйте Силу Небес!</div>    
+        </div>
+        <div class="block" id="6">
+            <img src="images/index/pizza6.jpg">
+            <div class="title">Пицца "Вкусняшка"</div>
+            <div class="comment">Вкусняшка для милашки</div>    
+        </div>
+        <div class="block" id="7">
+            <img src="images/index/pizza7.jpg">
+            <div class="title">Пицца "Фу, трава"</div>
+            <div class="comment">Выращена на поле для вашего стола</div>    
+        </div>
+        <div class="block" id="8">
+            <img src="images/index/pizza8.jpg">
+            <div class="title">Пицца "Странная"</div>
+            <div class="comment">Ну она реально странная, посмотрите</div>    
+        </div>
+        <div class="block" id="9">
+            <img src="images/index/pizza9.jpg">
+            <div class="title">Пицца "Последняя"</div>
+            <div class="comment">ЭТО ПОСЛЕДНЕЕ, ЧТО ВЫ ПОЧУВСТВУЕТЕ В ЖИЗНИ!!!</div>    
+        </div>
+    </div>
+
+    <script> 
+        var change_control = 1
+        var change = document.getElementById("change-size");
+        change.addEventListener("click",function(){            
+            change_width = 0;
+            change_height = 0;
+            change_title = 0;
+            change_comment = 0;
+
+            if (change_control == 1) {
+                change_width = "800px";
+                change_height = "723px";
+                change_title = "200%";
+                change_comment = "200%";
+                change_control = 0;
+                change.style.background = "white";
+            }
+            else {
+                change_width = "520px";
+                change_height = "470px";
+                change_title = "120%";
+                change_comment = "100%";
+                change_control = 1;
+                change.style.background = "deepskyblue"
+            }
+            
+            var blocks = document.getElementsByClassName("block");
+            for(let i = 0; i < blocks.length; i++){
+                blocks[i].style.width = change_width;
+                blocks[i].style.height = change_height;
+            }
+
+            var titles = document.getElementsByClassName("title");
+            for(let i = 0; i < blocks.length; i++){
+                titles[i].style.fontSize = change_title;
+            }
+
+            var comments = document.getElementsByClassName("title");
+            for(let i = 0; i < blocks.length; i++){
+                comments[i].style.fontSize = change_comment;
+            }            
+        })
+        
+        var zoom = document.getElementsByClassName("block");
+        for(let i = 0; i < zoom.length; i++){
+                zoom[i].addEventListener("click", function(){
+                    
+
+                    var add = document.getElementById("add");
+
+
+                    add.innerHTML = '<div id="this_pizza"><img src="images/index/pizza' + (i + 1).toString() +'.jpg"><div id="title">' + zoom[i].childNodes[3].innerHTML +'</div><div id="comment">' + zoom[i].childNodes[5].innerHTML +'</div></div>';
+                   
+                   
+                    let div = document.getElementById("this_pizza");
+
+                    div.addEventListener("click", function(){
+                        div.remove();
+                    })
+
+                    div.style.width = "93vw";
+                    div.style.height = "93vh";
+                    div.style.background = "white";
+                    div.style.display = "flex";
+                    div.style.flexDirection = "column";
+                    div.style.flexWrap = "wrap";
+                    div.style.alignContent = "center";
+                    div.style.justifyContent = "space-around";
+                    div.style.border = "3px solid black";
+                    div.style.opacity = "92%";
+
+                    
+                    let title = document.getElementById("title");
+                    title.style.fontWeight = "bolder";
+                    title.style.fontSize = "230%";
+
+                    let comment = document.getElementById("comment");
+                    comment.style.fontWeight = "bold";
+                    comment.style.fontSize = "140%";
+
+
+                    
+                });
+            }
+        
+        var x = document.getElementById('1');
+        console.log(x.childNodes);
+    </script>
+        <!--        
+        Требования:
+        - Меню 
+        - Карточки товаров - блоки
+        - При клике - расширяется
+        
+        
+        -->
+
+</body>
+</html>
