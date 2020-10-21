@@ -8,31 +8,43 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
-    <title>Hello, world!</title>
+    <title>Fernando</title>
     <link href="carousel.css" rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
+      <div class="collapse bg-secondary" id="navbarHeader">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              <p class="text-warning">The modern pizza was originally invented in Naples, Italy but the word pizza is Greek in origin, derived from the Greek word pēktos meaning solid or clotted. The ancient Greeks covered their bread with oils, herbs and cheese. The first major innovation that led to flat bread pizza was the use of tomato as a topping. It was common for the poor of the area around Naples to add tomato to their yeast-based flat bread, and so the pizza began.</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
                 <li><a href="#" class="text-white">Follow on Twitter</a></li>
                 <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>                          
               </ul>
+              <h4 class="text-white">Change theme</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <label class="switch" id="theme">
+                    <input type="checkbox" onchange="change_theme()" id="dark">
+                    <span class="slider round"></span>
+                  </label>
+                </li>
+                <li><button type="button" class="btn btn-outline-success" id="sin">Sign in</button><button type="button" class="btn btn-outline-warning" id="sup">Sign up</button> </li>
+              </ul>
+              
+              
             </div>
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="navbar navbar-dark bg-secondary shadow-sm" id="navbarHeaderLow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
@@ -48,9 +60,9 @@
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="0" class="active bg-dark"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="bg-dark"></li>
+          <li data-target="#myCarousel" data-slide-to="2" class="bg-dark"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -58,9 +70,9 @@
             
             <div class="container">
               <div class="carousel-caption text-left x">
-                <h1>Example headline.</h1>
-                <p class="text-carousel">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>              
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <h1 class="text-carousel">Pizza genius</h1>
+                <p class="text-carousel">Modern pizza evolved from similar flatbread dishes in Naples, Italy, in the 18th or early 19th century.rior to that time, flatbread was often topped with ingredients such as garlic, salt, lard, and cheese.</p>              
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Buy today</a></p>
               </div>
             </div>
           </div>
@@ -68,8 +80,8 @@
             <img src="imagins/carousel/pizza2.jpg">
             <div class="container">
               <div class="carousel-caption x">
-                <h1>Another example headline.</h1>
-                <p class="text-carousel">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h1 class="text-carousel">Pizza papers</h1>
+                <p class="text-carousel">It is uncertain when tomatoes were first added and there are many conflicting claims. Until about 1830, pizza was sold from open-air stands and out of pizza bakeries.</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
               </div>
             </div>
@@ -78,9 +90,9 @@
             <img src="imagins/carousel/pizza3.jpg">
             <div class="container">
               <div class="carousel-caption text-right x">
-                <h1>One more for good measure.</h1>
-                <p class="text-carousel">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1 class="text-carousel">Pizza lords</h1>
+                <p class="text-carousel">A popular contemporary legend holds that the archetypal pizza, pizza Margherita, was invented in 1889, when the Royal Palace of Capodimonte commissioned the Neapolitan pizzaiolo (pizza maker) Raffaele Esposito to create a pizza in honor of the visiting Queen Margherita.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse pizza</a></p>
               </div>
             </div>
           </div>
@@ -256,7 +268,7 @@
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Yet one another pizza</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -279,10 +291,203 @@
       </div>
     </div>
 
+
+     <!-- Modal -->
+     <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Signing in...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row justify-content-md-center">
+                <div class="col-md-8 order-md-1">
+                  <h4 class="mb-3">User info</h4>
+                  <form class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+                      <label for="username">Username</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required maxlength="15" minlength="2">
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Your username is required and len between 2 and 15.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">                      
+                      <div class="col-md-6 mb-3">
+                        <label for="firstName">Password</label>
+                        <input type="text" class="form-control" id="passwordOne" placeholder="" value="" required minlength="8" pattern="[a-zA-Z](?=.*[0-9])(?=.*[_])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_]{8,}">
+                        <div class="invalid-feedback">
+                          Password is required and should consist of Aa_1.
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6 mb-3">
+                        <label for="lastName">Repeat password</label>
+                        <input type="text" class="form-control" id="passwordTwo" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                          Repeat password must be equal.
+                        </div>
+                      </div>
+                    </div>
+            
+            
+                    <div class="mb-3">
+                      <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+                    </div>
+            
+                    <div class="mb-3">
+                      <label for="address">Phone number</label>
+                      <input type="text" class="form-control" id="phone" placeholder="8(999)000-00-00" required pattern="((\+7)|8)[0-9]{10}">
+                      <div class="invalid-feedback">
+                        Please enter your phone number at correct format.
+                      </div>
+                    </div>          
+            
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="country">Country</label>
+                        <select class="custom-select d-block w-100" id="country" required>
+                          <option value="">Choose...</option>
+                          <option>Россия</option>
+                          <option>Греция</option>
+                          <option>Франция</option>
+                          <option>Англия</option>
+                          <option>Румыния</option>
+                          <option>Беларуссия</option>
+                          <option>Норвегия</option>
+                          <option>Африка</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid country.
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="state">Sity</label>
+                        <select class="custom-select d-block w-100" id="state" required>
+                          <option value="">Choose...</option>
+                          <option>Москва</option>
+                          <option>Казань</option>
+                          <option>Екатеринбург</option>
+                          <option>Глазго</option>
+                          <option>Дубаи</option>
+                          <option>Новгород</option>
+                          <option>Улан-Удэ</option>
+                          <option>Светлогорск</option>
+                          <option>Лондон</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="same-address"required>
+                      <label class="custom-control-label" for="same-address" >I read and agree to policy privacy</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="save-info">
+                      <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                    </div>
+                    <hr class="mb-4">
+            
+                  
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit">Continue to checkout</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="send">Send</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="delete_all_info()">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Signing up...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row justify-content-md-center">
+                   
+                <div class="col-md-8 order-md-1">
+                  <h4 class="mb-3">User info</h4>
+                  <form class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+                      <label for="username">Username</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required maxlength="15" minlength="2" autocomplete="off">
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Your username is required and len between 2 and 15.
+                        </div>
+                      </div>
+                    </div>
+
+                                          
+                      <div class="mb-3">
+                        <label for="firstName">Password</label>
+                        <input type="text" class="form-control" id="passwordOne" placeholder="" value="" required minlength="8" pattern="[a-zA-Z](?=.*[0-9])(?=.*[_])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_]{8,}">
+                        <div class="invalid-feedback">
+                          Password is required and should consist of Aa_1.
+                        </div>
+                      </div>
+                      
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" id="submit">Continue to checkout</button>
+                  </form>
+                </div>
+               
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="send2">Send</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="delete_all_info()">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="functions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="functions.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
